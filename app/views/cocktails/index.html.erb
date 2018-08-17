@@ -1,0 +1,17 @@
+<div class="banner">
+  <div class="banner-content">
+    <h1>Cocktails</h1>
+    <div class="text-animation">
+      <span id="banner-typed-text"></span>
+    </div>
+  </div>
+</div>
+
+<h1>Fancy Cocktails</h1>
+<ol>
+  <% @cocktails.each do |c| %>
+  <li><%= link_to c[:name], cocktail_path(c) %></li>
+  <% end %>
+</ol>
+
+<%= link_to "New Cocktail", new_cocktail_path(@cocktail), class: "btn btn-success" %>
